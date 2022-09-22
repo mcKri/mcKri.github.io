@@ -48,7 +48,7 @@
         }
 
         .header {
-            padding: 0px;
+            display:block;
             width: 90%;
             text-align: center;
             background: white;
@@ -64,6 +64,39 @@
             margin: 15px 0;
             display: block;
         }
+
+        .collapsible {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white;
+            cursor: pointer;
+            padding: 150px;
+            padding-top: 50px;
+            width: 100%;
+            max-width: 360px;
+            border-radius: 15px;
+            border-color: rgba(0, 0, 0, 0);
+            text-align: center;
+            font-size: 15px;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .active {
+            display: none;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .collapsible:hover {
+            background-color: white;
+            color: #4ADBFF;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
     </style>
 </head>
 
@@ -75,44 +108,83 @@
         <h3>music guy</h3>
     </div>
 
-    <h2 align="left">2022</h2>
-    <table>
-        <tr>
-            <td>
-                <audio controls>
-                    <source src="music/220920_dink.mp3" type="audio/mp3">
-                </audio>
-            </td>
-            <td>
-                <p>this is some text explaining how i made this shit</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <audio controls>
-                    <source src="music/220629_beep.mp3" type="audio/mp3">
-                </audio>
-            </td>
-            <td>
-                <p>this is some text explaining how i made this shit</p>
-            </td>
-        </tr>
-    </table>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <h4>who this guy</h4>
+                    <p>
+                        here's some text about me
+                    </p>
+                </td>
+                <td>
+                    <button type="button" class="collapsible">Show stuff</button>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-    <h2 align="left">2021</h2>
-    <table>
-        <tr>
-            <td>
-                <audio controls>
-                    <source src="music/courtyard2.wav" type="audio/wav">
-                </audio>
-            </td>
-            <td>
-                <p>this is some text explaining how i made this shit</p>
-            </td>
-        </tr>
-    </table>
+    <div class="content">
+        <h2>2022</h2>
+        <table>
+            <tr>
+                <td>
+                    <audio controls>
+                        <source src="music/220920_dink.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+                <td>
+                    <p>what this</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls>
+                        <source src="music/220629_beep.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+                <td>
+                    <p>this is some text explaining how i made this shit</p>
+                </td>
+            </tr>
+        </table>
+
+        <h2>2021</h2>
+        <table>
+            <tr>
+                <td>
+                    <audio controls>
+                        <source src="music/courtyard2.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <p>this is some text explaining how i made this shit</p>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
+
+<script>
+    const audios = document.getElementsByTagName('audio');
+    for (audio of audios) {
+        audio.volume = 0.5;
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+
+    coll[0].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = document.getElementsByClassName("content")[0];
+        if (content.style.maxHeight)
+        {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.overflow = "inherit";
+        }
+    });
+</script>
 
 </html>
