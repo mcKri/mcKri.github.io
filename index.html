@@ -25,6 +25,15 @@
             font-size: 20px;
         }
 
+        h1 {
+            font-size: 80px;
+        }
+
+        h2 {
+            font-size: 50px;
+            color: white;
+        }
+
         a {
             color: white;
             text-decoration: none;
@@ -32,6 +41,18 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        td {
+            padding: 15px;
+        }
+
+        .header {
+            padding: 0px;
+            width: 90%;
+            text-align: center;
+            background: white;
+            color: #4ADBFF;
         }
 
         .link {
@@ -47,13 +68,38 @@
 </head>
 
 <body>
-    <div>
+    <a href="https://google.com/" class="link">Google</a>
+
+    <div class="header">
         <h1>Kri</h1>
         <h3>music guy</h3>
     </div>
 
-    <a href="https://google.com/" class="link">Google</a>
+    <h2 align="left">2022</h2>
+    <table>
+        <tr>
+            <td>
+                <audio controls>
+                    <source src="music/220920_dink.mp3" type="audio/mp3">
+                </audio>
+            </td>
+            <td>
+                <p>this is some text explaining how i made this shit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <audio controls>
+                    <source src="music/220629_beep.mp3" type="audio/mp3">
+                </audio>
+            </td>
+            <td>
+                <p>this is some text explaining how i made this shit</p>
+            </td>
+        </tr>
+    </table>
 
+    <h2 align="left">2021</h2>
     <table>
         <tr>
             <td>
@@ -62,7 +108,6 @@
                 </audio>
             </td>
             <td>
-                <h3>2021</h3>
                 <p>this is some text explaining how i made this shit</p>
             </td>
         </tr>
