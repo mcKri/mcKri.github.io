@@ -24,7 +24,11 @@
             background-color: #4ADBFF;
             font-family: sans-serif;
             font-size: 15px;
-            color: white;
+            color: black;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: white;
         }
 
         h1 {
@@ -33,12 +37,23 @@
         }
 
         h2 {
-            font-size: 40px;
+            font-size: 42px;
+            color: white;
         }
 
         h3 {
-            font-size: 30px;
+            font-size: 35px;
             color: black;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        h3 span {
+            font-size: 15px;
+            float: right;
+            color: white;
+            font-weight: normal;
+            text-align: right;
         }
 
         h4 {
@@ -58,14 +73,10 @@
             padding: 15px;
         }
 
-        .small {
-            font-size: 15px
-        }
-
         .header {
             width: 90%;
             border-radius: 15px;
-            margin-top: 10px;
+            margin-top: 15px;
             background: white;
             color: #4ADBFF;
         }
@@ -101,23 +112,25 @@
         }
 
         .projects {
-            display: flex;
+            display: grid;
             width: 80%;
+            padding-bottom: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         }
 
         .project {
             min-width: 300px;
-            max-width: 50%;
-            margin: 0 10px;
+            max-width: 100%;
+            margin: 10px;
             background-color: rgba(255, 255, 255, 0.25);
             border-radius: 15px;
+            padding: 0 20px;
         }
 
         .projectDesc {
             background-color: white;
             color: black;
             padding: 10px;
-            margin: 0 18px;
             text-align: justify;
         }
 
@@ -144,8 +157,8 @@
         <p>
             Hi, I'm some Dutch guy who's been absorbed by video game music for very long.<br>
             After around 12 years of playing very cool instruments (mostly drums, guitar, bass), I've finally made steps in the past couple of years to make my own stuff.
-            This started off with making chiptunes in FamiTracker and Beepbox.co, because minimalistic retro sounds have always been very charming to me.
-            I'm not the most knowledgeable musician, but I really enjoy finding the right sound to add some more life to specific scenes!
+            This started off with making chiptunes in FamiTracker and Beepbox.co, I've always found minimalistic retro sounds very charming!<br><br>
+            I'm not the most knowledgeable musician on earth, but I really enjoy finding the right sound to add some more life to specific scenes!
         </p>
     </div>
     <br>
@@ -153,7 +166,9 @@
     <h2>projects</h2>
     <div class="projects">
         <div class="project">
-            <h3>RGB <i class="small">(working title)</i></h3>
+
+            <h3>RGB <i style="font-size: 15px; font-weight: normal">(working title)</i><span>2022 - present</span></h3>
+
             <p class="projectDesc">
                 I started working on a (mostly) solo game project, solely as an excuse to make more game music.<br>
                 So far it's really helped me explore my sound more, and I love imagining different scenes to write music for!<br><br>
@@ -164,7 +179,7 @@
                 <tr>
                     <td>
                         <audio controls>
-                            <source src="music/220920_dink.mp3" type="audio/mp3">
+                            <source src="music/220920_dink.wav" type="audio/wav">
                         </audio>
                     </td>
                     <td>
@@ -183,6 +198,16 @@
                 </tr>
                 <tr>
                     <td>
+                        <audio controls>
+                            <source src="music/220824_evil.mp3" type="audio/mp3">
+                        </audio>
+                    </td>
+                    <td>
+                        <p class="trackDesc">evil vampire man dialogue</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <audio controls loop>
                             <source src="music/220629_beep.flac" type="audio/flac">
                         </audio>
@@ -195,16 +220,72 @@
         </div>
 
         <div class="project">
-            <h3>some other stuff</h3>
+            <h3 style="font-size: 30px">Justice Realms:<span>july 2022</span><br>Painting of Guidance</h3>
+
+            <p class="projectDesc">
+                moon jam
+                72h
+            </p>
             <table>
                 <tr>
                     <td>
                         <audio controls>
-                            <source src="music/courtyard2.wav" type="audio/wav">
+                            <source src="music/queen of hearts+.ogg" type="audio/ogg">
                         </audio>
                     </td>
                     <td>
-                        <p class="trackDesc">this is some text explaining how i made this shit</p>
+                        <p class="trackDesc">queen of hearts</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <audio controls>
+                            <source src="music/gog fight+.ogg" type="audio/ogg">
+                        </audio>
+                    </td>
+                    <td>
+                        <p class="trackDesc">god fight</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <audio controls loop>
+                            <source src="music/blue fight.ogg" type="audio/ogg">
+                        </audio>
+                    </td>
+                    <td>
+                        <p class="trackDesc">blue fight</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <audio controls loop>
+                            <source src="music/green fight.ogg" type="audio/ogg">
+                        </audio>
+                    </td>
+                    <td>
+                        <p class="trackDesc">green fight</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="project">
+            <h3>Cross Boss<span>2022</span></h3>
+
+            <p class="projectDesc">
+                office game
+                minigames
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <audio controls>
+                            <source src="music/main theme OMEGAFINISHED.mp3" type="audio/mp3">
+                        </audio>
+                    </td>
+                    <td>
+                        <p class="trackDesc">main theme loop</p>
                     </td>
                 </tr>
                 <tr>
@@ -214,7 +295,27 @@
                         </audio>
                     </td>
                     <td>
-                        <p class="trackDesc">this is some text explaining how i made this shit</p>
+                        <p class="trackDesc">biz</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="project">
+            <h3 style="font-weight: normal; font-size: 25px;">some other stuff</h3>
+
+            <p class="projectDesc">
+                you know
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <audio controls>
+                            <source src="music/moonthly banjo kazooie.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <p class="trackDesc">bango mango</p>
                     </td>
                 </tr>
             </table>
