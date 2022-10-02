@@ -16,7 +16,7 @@
         }
 
         body {
-            display: inline-flex;
+            display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
@@ -29,10 +29,6 @@
 
         audio::-webkit-media-controls-panel {
             background-color: white;
-        }
-
-        audio::-webkit-media-controls-download-button {
-            display:none;
         }
 
         h1 {
@@ -49,7 +45,7 @@
             font-size: 35px;
             color: black;
             text-align: left;
-            margin: 20px 0;
+            margin: 0;
         }
 
         h3 span {
@@ -105,6 +101,7 @@
 
         .intro {
             width: 50%;
+            min-width: 280px;
             border-radius: 10px;
             padding: 30px;
             padding-top: 7px;
@@ -116,19 +113,21 @@
         }
 
         .projects {
-            display: grid;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
             width: 80%;
             padding-bottom: 10px;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         }
 
         .project {
             min-width: 300px;
-            max-width: 100%;
+            max-width: 700px;
             margin: 10px;
             background-color: rgba(255, 255, 255, 0.25);
             border-radius: 15px;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         .projectDesc {
@@ -136,6 +135,12 @@
             color: black;
             padding: 10px;
             text-align: justify;
+        }
+
+        .projectContent {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-row-gap: 10px;
         }
 
         .trackDesc {
@@ -179,48 +184,32 @@
                 I'm developing RGB in Unity, and it'll be a top-down RPG with bullet hell combat where you utilize the colours red, green and blue to complete puzzles.
                 <i>(It'll make sense eventually.)</i>
             </p>
-            <table>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/220920_dink.wav" type="audio/wav">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">shop music</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/220924_boss.flac" type="audio/flac">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">boss fight</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/220824_evil.mp3" type="audio/mp3">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">evil vampire man dialogue</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls loop>
-                            <source src="music/220629_beep.flac" type="audio/flac">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">combat music</p>
-                    </td>
-                </tr>
-            </table>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/220920_dink.wav" type="audio/wav">
+                </audio>
+
+                <p class="trackDesc">shop music</p>
+
+                <audio controls>
+                    <source src="music/220924_boss.flac" type="audio/flac">
+                </audio>
+
+                <p class="trackDesc">boss fight</p>
+
+                <audio controls>
+                    <source src="music/220824_evil.mp3" type="audio/mp3">
+                </audio>
+
+                <p class="trackDesc">evil vampire man dialogue</p>
+
+                <audio controls>
+                    <source src="music/220629_beep.flac" type="audio/flac">
+                </audio>
+
+                <p class="trackDesc">combat music</p>
+            </div>
         </div>
 
         <div class="project">
@@ -230,48 +219,32 @@
                 moon jam
                 72h
             </p>
-            <table>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/queen of hearts+.ogg" type="audio/ogg">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">queen of hearts</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/gog fight+.ogg" type="audio/ogg">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">god fight</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls loop>
-                            <source src="music/blue fight.ogg" type="audio/ogg">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">blue fight</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls loop>
-                            <source src="music/green fight.ogg" type="audio/ogg">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">green fight</p>
-                    </td>
-                </tr>
-            </table>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/queen of hearts+.ogg" type="audio/ogg">
+                </audio>
+
+                <p class="trackDesc">queen of hearts</p>
+
+                <audio controls>
+                    <source src="music/gog fight+.ogg" type="audio/ogg">
+                </audio>
+
+                <p class="trackDesc">god fight</p>
+
+                <audio controls>
+                    <source src="music/blue fight.ogg" type="audio/ogg">
+                </audio>
+
+                <p class="trackDesc">blue fight</p>
+
+                <audio controls>
+                    <source src="music/green fight.ogg" type="audio/ogg">
+                </audio>
+
+                <p class="trackDesc">green fight</p>
+            </div>
         </div>
 
         <div class="project">
@@ -281,28 +254,20 @@
                 office game
                 minigames
             </p>
-            <table>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/main theme OMEGAFINISHED.mp3" type="audio/mp3">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">main theme loop</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/biz.mp3" type="audio/mp3">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">biz</p>
-                    </td>
-                </tr>
-            </table>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/main theme OMEGAFINISHED.mp3" type="audio/mp3">
+                </audio>
+
+                <p class="trackDesc">main theme loop</p>
+
+                <audio controls>
+                    <source src="music/biz.mp3" type="audio/mp3">
+                </audio>
+
+                <p class="trackDesc">biz</p>
+            </div>
         </div>
 
         <div class="project">
@@ -311,21 +276,16 @@
             <p class="projectDesc">
                 you know
             </p>
-            <table>
-                <tr>
-                    <td>
-                        <audio controls>
-                            <source src="music/moonthly banjo kazooie.wav" type="audio/wav">
-                        </audio>
-                    </td>
-                    <td>
-                        <p class="trackDesc">bango mango</p>
-                    </td>
-                </tr>
-            </table>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/moonthly banjo kazooie.wav" type="audio/wav">
+                </audio>
+
+                <p class="trackDesc">bango mango</p>
+            </div>
         </div>
     </div>
-
 </body>
 
 <script>
