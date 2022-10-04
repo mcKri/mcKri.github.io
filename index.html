@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kri.boats</title>
-    <link rel="icon" href="icon.png">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <style>
         :root {
             --color1: white;
             --color2: black;
-            --color3: #4ADBFF;
-            --color4: #77E4FF;
+            --color3: #04a7cb;
+            --color4: #3ecdf0;
             --color5: #4a4a49;
         }
 
@@ -30,6 +31,7 @@
             align-items: center;
             text-align: center;
             background-color: var(--color3);
+            /*background: linear-gradient(to right, var(--color3) 0%, rgb(31, 30, 38) 20% 80%, var(--color3) 100%);*/
             font-family: sans-serif;
             font-size: 15px;
             color: var(--color2);
@@ -41,8 +43,10 @@
 
         h1 {
             font-size: 80px;
-            margin-top: 40px;
+            margin-top: 50px;
             margin-bottom: 0;
+            color: var(--color4);
+            text-shadow: 3px 3px var(--color3);
         }
 
         h2 {
@@ -62,6 +66,7 @@
             font-size: 15px;
             float: right;
             color: var(--color1);
+            text-shadow: 2px 1px rgb(0, 0, 0, 0.25);
             font-weight: normal;
             text-align: right;
         }
@@ -72,7 +77,7 @@
             color: var(--color2);
             margin-top: 0;
             margin-bottom: 40px;
-            text-shadow: 5px 0px rgb(0, 171, 255, 0.25), 10px 1px rgb(255, 0, 0, 0.15), 15px 2px rgb(0, 255, 0, 0.05);
+            text-shadow: 5px 0px rgb(0, 171, 255, .4), 10px 1px rgb(255, 0, 0, .3), 15px 2px rgb(0, 255, 0, .2);
         }
 
         a {
@@ -95,34 +100,55 @@
         }
 
         .header {
-            width: 90%;
+            width: 85%;
+            min-height: 25%;
             border-radius: 15px;
             margin-top: 15px;
-            background: var(--color1);
+            background-image: url("images/bird_banner3.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /*background: var(--color1);*/
             color: var(--color3);
         }
 
         .links {
-            width: 70%;
+            width: 85%;
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center
+            align-items: stretch;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
         }
 
         .link {
-            width: 100%;
-            max-width: 200px;
+            background-color: rgb(225, 225, 225);
+            margin: 0px 5px;
+            margin-bottom: 5px;
+            padding: 3px;
+            color: var(--color2);
+            border-style: outset;
             border-radius: 5px;
-            padding: 10px;
-            background-color: var(--color4);
-            margin: 15px 5px;
-            font-size: 20px;
-            color: var(--color1);
+            border-width: 2px;
+            vertical-align: center;
+            font-size: 17px;
+            box-shadow: 3px 2px rgb(237, 144, 77);
+        }
+
+        .icon {
+            height: 20px;
+            width: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: left;
+            padding-right: 5px;
         }
 
         .url {
             text-decoration: underline;
+            color: var(--color3);
         }
 
         .intro {
@@ -136,6 +162,7 @@
             color: var(--color2);
             font-size: 20px;
             text-align: justify;
+            box-shadow: 3px 3px rgb(255, 255, 255, .8);
         }
 
         .projects {
@@ -154,6 +181,7 @@
             background-color: var(--color4);
             border-radius: 15px;
             padding: 20px;
+            box-shadow: 3px 3px rgb(255, 255, 255, .8);
         }
 
         .projectDesc {
@@ -182,17 +210,30 @@
     </div>
 
     <div class="links">
-        <a href="https://twitter.com/mcKrii" class="link">Twitter</a>
-        <a href="https://www.google.com/search?rlz=1C1ASUM_enNL785NL785&sxsrf=ALiCzsaFNnw01WSwvlPuaF3EQIn2rdJDQw:1663858745146&q=why&si=AC1wQDCKpJ6JrkYEZCnuZrTYpHZFsYIIFedDEiHvQitmeuKbn2ZIlS7fAcsKwwGIZG_JjUFaySGTb-xWq48BFP8pz27o0LqXX4pf3PBAOR7IZiSiAy0LjhOcqejQfZaHQc_LtWIZWUkuTe0Ht_9GGzGK-L7t7W94gw%3D%3D&sa=X&ved=2ahUKEwjdy9fr1Kj6AhWvM-wKHdxfBtoQ6RN6BAgxEAE&biw=1920&bih=937&dpr=1" class="link">Google?</a>
+        <div class="link">
+            <img class="icon" src="icons/discord.svg">
+            Kri#5722
+        </div>
+        <div class="link">
+            <img class="icon" src="icons/email.svg">
+            <a class="url" href="mailto:kri.boats@gmail.com">
+                kri.boats@gmail.com
+            </a>
+        </div>
+        <div class="link">
+            <img class="icon" src="icons/twitter.svg">
+            <a class="url" href="https://twitter.com/mcKrii">
+                @mcKrii
+            </a>
+        </div>
     </div>
 
-
-    <h2>who/why is this guy?</h2>
+    <h2>who/why is this?</h2>
     <div class="intro">
         <p>
             Hi, I'm some Dutch guy who's been absorbed by video game music for very long.<br>
             After around 12 years of playing very cool instruments (mostly drums, guitar, bass), I've finally made steps in the past couple of years to make my own stuff.
-            This started off with making chiptunes in FamiTracker and Beepbox.co, I've always found minimalistic retro sounds very charming!<br><br>
+            This started off with making chiptunes in FamiTracker and Beepbox.co, because I've always found minimalistic retro sounds very charming!<br><br>
             I'm not the most knowledgeable musician on earth, but I really enjoy finding the right sound to add some more life to specific scenes!
         </p>
     </div>
@@ -273,7 +314,7 @@
 
                 <p class="trackDesc">
                     Combat music for the Blue Zone, mostly inhabited by robotic things.
-                    Also your companion instantly shreds every enemy, so I made the track as weird as possible.
+                    Also your companion is scripted to instantly shred every enemy so I made the track as weird as possible.
                 </p>
 
                 <audio controls>
@@ -313,10 +354,7 @@
 
         <div class="project">
             <h3 style="font-weight: normal; font-size: 25px;">some other stuff</h3>
-
-            <p class="projectDesc">
-                the rest
-            </p>
+            <br>
 
             <div class="projectContent">
                 <audio controls>
