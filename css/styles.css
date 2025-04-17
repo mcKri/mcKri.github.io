@@ -123,7 +123,6 @@ footer {
 }
 
 .header {
-    width: 100%;
     padding-bottom: 150px;
     margin-bottom: -50px;
     background-image: url("../images/bird._banner_big_2.png");
@@ -131,7 +130,6 @@ footer {
     background-size: fill;
     background-position: top center;
     color: var(--color3);
-    border-bottom-right-radius: 15px;
 }
 
 .links {
@@ -259,6 +257,11 @@ footer {
     transform: translateY(-50%) rotate(90deg);
     transform-origin: center left;
 }
+
+#audio-visualizer-left canvas {
+    transform: scaleX(-1)
+}
+
 #audio-visualizer-right {
     right: 8vw;
     transform: translateY(-50%) rotate(-90deg);
