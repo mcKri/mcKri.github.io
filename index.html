@@ -8,281 +8,192 @@
     <title>kri.boats</title>
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <style>
-        :root {
-            --color1: white;
-            --color2: black;
-            --color3: #04a7cb;
-            --color4: #3ecdf0;
-            --color5: #4a4a49;
-        }
-
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-            background-color: var(--color3);
-            /*background: linear-gradient(to right, var(--color3) 0%, rgb(31, 30, 38) 20% 80%, var(--color3) 100%);*/
-            font-family: sans-serif;
-            font-size: 15px;
-            color: var(--color2);
-        }
-
-        audio::-webkit-media-controls-panel {
-            background-color: var(--color1);
-        }
-
-        h1 {
-            font-size: 80px;
-            margin-top: 50px;
-            margin-bottom: 0;
-            color: var(--color4);
-            text-shadow: 3px 3px var(--color3);
-        }
-
-        h2 {
-            font-size: 42px;
-            color: var(--color1);
-            text-shadow: 5px 3px rgb(0, 0, 0, 0.25);
-        }
-
-        h3 {
-            font-size: 35px;
-            color: var(--color2);
-            text-align: left;
-            margin: 0;
-        }
-
-        h3 span {
-            font-size: 15px;
-            float: right;
-            color: var(--color1);
-            text-shadow: 2px 1px rgb(0, 0, 0, 0.25);
-            font-weight: normal;
-            text-align: right;
-        }
-
-        h4 {
-            font-size: 25px;
-            font-weight: normal;
-            color: var(--color2);
-            margin-top: 0;
-            margin-bottom: 40px;
-            text-shadow: 5px 0px rgb(0, 171, 255, .4), 10px 1px rgb(255, 0, 0, .3), 15px 2px rgb(0, 255, 0, .2);
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            font-size: 10px;
-            color: var(--color1);
-            float: right;
-        }
-
-        .R:hover { color: rgb(255, 0, 0); }
-        .G:hover { color: rgb(0, 255, 0); }
-        .B:hover { color: rgb(0, 0, 255); }
-
-        .tiny {
-            font-size: 12px;
-            color: var(--color5);
-        }
-
-        .header {
-            width: 85%;
-            min-height: 25%;
-            border-radius: 15px;
-            margin-top: 15px;
-            background-image: url("images/bird_banner3.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            /*background: var(--color1);*/
-            color: var(--color3);
-        }
-
-        .links {
-            width: 85%;
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .link {
-            background-color: rgb(225, 225, 225);
-            margin: 0px 5px;
-            margin-bottom: 5px;
-            padding: 3px;
-            padding-right: 5px;
-            color: var(--color2);
-            border-style: outset;
-            border-radius: 5px;
-            border-width: 2px;
-            vertical-align: center;
-            font-size: 17px;
-            box-shadow: 3px 2px rgb(237, 144, 77);
-        }
-
-        .icon {
-            height: 20px;
-            width: 20px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            float: left;
-            padding-right: 5px;
-        }
-
-        .url {
-            text-decoration: underline;
-            color: var(--color3);
-        }
-
-        .intro {
-            width: 50%;
-            min-width: 280px;
-            border-radius: 10px;
-            padding: 30px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-            background-color: var(--color4);
-            color: var(--color2);
-            font-size: 20px;
-            text-align: justify;
-            box-shadow: 3px 3px rgb(255, 255, 255, .8);
-        }
-
-        .projects {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            width: 80%;
-            padding-bottom: 10px;
-        }
-
-        .project {
-            min-width: 300px;
-            max-width: 700px;
-            margin: 10px;
-            background-color: var(--color4);
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 3px 3px rgb(255, 255, 255, .8);
-        }
-
-        .projectDesc {
-            background-color: var(--color1);
-            color: var(--color2);
-            padding: 10px;
-            text-align: justify;
-        }
-
-        .projectContent {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-row-gap: 10px;
-        }
-
-        .trackDesc {
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta:wght@400;700&display=swap">
+    <link rel="stylesheet" href = "css/styles.css">
 </head>
 
 <body>
-    <div class="header">
-        <h1>Kri</h1>
-        <h4>music guy</h4>
-    </div>
+    <div class="cover" id="cover">
+        <div class="header">
+            <h1>Kri</h1>
+            <h4>music guy</h4>
+        </div>
 
-    <div class="links">
-        <div class="link">
-            <img class="icon" src="icons/discord.svg">
-            kri_real
+        <div class="links">
+            <div class="link">
+                <img class="icon" src="icons/discord.svg">
+                kri_real
+            </div>
+            <div class="link">
+                <img class="icon" src="icons/bluesky.svg">
+                <a class="url" href="https://bsky.app/profile/kri.boats">
+                    @kri.boats
+                </a>
+            </div>
+            <div class="link">
+                <img class="icon" src="icons/twitter.svg">
+                <a class="url" href="https://twitter.com/kri_boats">
+                    @kri_boats
+                </a>
+            </div>
+            <div class="link">
+                <img class="icon" src="icons/email.svg">
+                <a class="url" href="mailto:kri.boats@gmail.com">
+                    kri.boats@gmail.com
+                </a>
+            </div>
         </div>
-        <div class="link">
-            <img class="icon" src="icons/email.svg">
-            <a class="url" href="mailto:kri.boats@gmail.com">
-                kri.boats@gmail.com
-            </a>
-        </div>
-        <div class="link">
-            <img class="icon" src="icons/twitter.svg">
-            <a class="url" href="https://twitter.com/mcKrii">
-                @mcKrii
-            </a>
-        </div>
-    </div>
 
-    <h2>who/why is this?</h2>
-    <div class="intro">
-        <p>
-            Hi, I'm some Dutch guy who's been absorbed by video game music for very long.<br>
-            After around 12 years of playing very cool instruments (mostly drums, guitar, bass), I've finally made steps in the past couple of years to make my own stuff.
-            This started off with making chiptunes in FamiTracker and Beepbox.co, because I've always found minimalistic retro sounds very charming!<br><br>
-            I'm not the most knowledgeable musician on earth, but I really enjoy finding the right sound to add some more life to specific scenes!
-        </p>
+        <h2>who / why is this?</h2>
+        <div class="intro">
+            <p>
+                hi im Kri i and i make music for games<br>
+                woohoo yippeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!!!
+            </p>
+        </div>
     </div>
     <br>
 
     <h2>projects</h2>
     <div class="projects">
         <div class="project">
-
-            <h3><b class="R">R</b><b class="G">G</b><b class="B">B</b> <i style="font-size: 15px; font-weight: normal">(working title)</i><span>august 2022 - present</span></h3>
+            <h3>
+                <b>???</b>
+            </h3>
 
             <p class="projectDesc">
-                I started working on a (mostly) solo game project, solely as an excuse to make more game music.<br>
-                So far it's really helped me explore my sound more, and I love imagining different scenes to write music for!<br><br>
-                I'm developing RGB in Unity, and it'll be a top-down RPG with bullet hell combat where you utilize the colours red, green and blue to complete puzzles.
-                <i>(It'll make sense eventually.)</i>
+                WIP
             </p>
 
             <div class="projectContent">
                 <audio controls>
-                    <source src="music/220920_dink.wav" type="audio/wav">
+                    <source src="music/roomba/r.wav" type="audio/wav">
                 </audio>
+                <p class="trackDesc">a music.</p>
+            </div>
+        </div>
 
-                <p class="trackDesc">--shop music--</p>
+        <div class="project">
+            <h3>
+                <b><a class="url" href="https://megafinger.itch.io/boulder-bash">Boulder Bash</a></b>
+                <span>january 2025</span>
+            </h3>
+
+            <p class="projectDesc">
+                Made for a two-week game jam, with the theme "You Are The Weapon". It's about a boulder rolling down a hill and crushing a bunch of guys.<br><br>
+                This time around I was mostly involved on the programming side, but I was still able to make some tracks! 
+            </p>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/boulder/uh.ogg" type="audio/ogg">
+                </audio>
+                <p class="trackDesc">Menu music</p>
 
                 <audio controls>
-                    <source src="music/220924_boss.flac" type="audio/flac">
+                    <source src="music/boulder/thing3.ogg" type="audio/ogg">
                 </audio>
+                <p class="trackDesc">Gameplay music for the first couple levels</p>
 
+                <audio controls>
+                    <source src="music/boulder/thign2.ogg" type="audio/ogg">
+                </audio>
+                <p class="trackDesc">Music for the extremely difficult finals levels</p>
+            </div>
+        </div>
+        
+        <div class="project">
+            <h3>
+                <b><a class="url" href="https://unicornly.itch.io/sunfall">Sunfall</a></b>
+                <span>july 2024</span>
+            </h3>
+
+            <p class="projectDesc">
+                Made for a two-week game jam, with the theme "Shadow Alchemy". We ended up settling on an idea where you switch between the dark/light world, which allowed me to do some fun stuff with the tracks! 
+            </p>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/sunfall/lab_present.ogg" type="audio/ogg">
+                </audio>
+                <p class="trackDesc">The present/dark version of the Lab, the intro area to the game.</p>
+
+                <audio controls>
+                    <source src="music/sunfall/lab_past.ogg" type="audio/ogg">
+                </audio>
+                <p class="trackDesc">(past/light version)</p>
+
+                <audio controls>
+                    <source src="music/sunfall/town_past.ogg" type="audio/ogg">
+                </audio>
+                <p class="trackDesc">The light version of the town music, where most of the quests take place!</p>
+
+                <audio controls>
+                    <source src="music/sunfall/thing_2.wav" type="audio/wav">
+                </audio>
+                <p class="trackDesc">(unused track)</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>
+                <b><a class="url" href="https://store.steampowered.com/app/1848520/Fruit_Salad/">Fruit Salad</a></b>
+                <span>october 2023</span>
+            </h3>
+
+            <p class="projectDesc">
+                A chill lil' puzzly game some friends asked me to make music for!
+            </p>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/fruit salad/uhh.wav" type="audio/wav">
+                </audio>
+                <p class="trackDesc">Menu music.</p>
+
+                <audio controls>
+                    <source src="music/fruit salad/something.wav" type="audio/wav">
+                </audio>
+                <p class="trackDesc">Initial gameplay music.</p>
+
+                <audio controls>
+                    <source src="music/fruit salad/beeps.wav" type="audio/wav">
+                </audio>
+                <p class="trackDesc">Gameplay music after you cross a certain score and start popping off.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>
+                <b class="R">R</b><b class="G">G</b><b class="B">B</b> <i style="font-size: 15px; font-weight: normal">(working title)</i>
+                <span>august 2022 - I DON'T KNOW</span>
+            </h3>
+
+            <p class="projectDesc">
+                <span class="R">Please </span><span class="G">be </span><span class="B">patient.</span>
+            </p>
+
+            <div class="projectContent">
+                <audio controls>
+                    <source src="music/rgb/220920_dink.wav" type="audio/wav">
+                </audio>
+                <p class="trackDesc">--shop--</p>
+
+                <audio controls>
+                    <source src="music/rgb/220924_boss.flac" type="audio/flac">
+                </audio>
                 <p class="trackDesc">--boss fight--</p>
 
                 <audio controls>
-                    <source src="music/220824_evil.mp3" type="audio/mp3">
+                    <source src="music/rgb/220824_evil.mp3" type="audio/mp3">
                 </audio>
-
                 <p class="trackDesc">
-                    Dialogue music for a very evil vampire man who I enjoy writing way too much.<br>
-                    <i class="tiny">(i picture him playing every instrument because no one else is capable enough)</i>
+                    Dialogue music for a very evil vampire man who I enjoy writing very much.<br>
                 </p>
 
                 <audio controls>
-                    <source src="music/220629_beep.flac" type="audio/flac">
+                    <source src="music/rgb/220629_beep.flac" type="audio/flac">
                 </audio>
-
                 <p class="trackDesc">--combat music--</p>
             </div>
         </div>
@@ -299,34 +210,29 @@
 
             <div class="projectContent">
                 <audio controls>
-                    <source src="music/queen of hearts+.ogg" type="audio/ogg">
+                    <source src="music/justice realms/queen of hearts+.ogg" type="audio/ogg">
                 </audio>
-
-                <p class="trackDesc">Boss battle music for the most regal Queen of Hearts.</p>
+                <p class="trackDesc">Boss battle music for the Queen of Hearts.</p>
 
                 <audio controls>
-                    <source src="music/gog fight+.ogg" type="audio/ogg">
+                    <source src="music/justice realms/gog fight+.ogg" type="audio/ogg">
                 </audio>
-
                 <p class="trackDesc">
                     Boss battle music for when you inevitably fight god.<br>
-                    I also made another version of this track for the <a class="url" style="color: rgb(248, 248, 248)" href="https://www.youtube.com/watch?v=M55tkpsMo2s&list=PLWCe6Rd6c67XpVwhBJa2zjWWBe219VEsX&index=1">Menu Theme!</a>
+                    I also made another version of this track for the <a class="url" href="https://www.youtube.com/watch?v=M55tkpsMo2s&list=PLWCe6Rd6c67XpVwhBJa2zjWWBe219VEsX&index=1">Menu Theme!</a>
                 </p>
 
                 <audio controls>
-                    <source src="music/blue fight.ogg" type="audio/ogg">
+                    <source src="music/justice realms/green fight.ogg" type="audio/ogg">
                 </audio>
-
-                <p class="trackDesc">
-                    Combat music for the Blue Zone, mostly inhabited by robotic things.
-                    Also your companion is scripted to instantly shred every enemy so I made the track as weird as possible.
-                </p>
-
-                <audio controls>
-                    <source src="music/green fight.ogg" type="audio/ogg">
-                </audio>
-
                 <p class="trackDesc">Combat music for the Green Zone, which is green. Flutes are mandatory in Green Zones.</p>
+                
+                <audio controls>
+                    <source src="music/justice realms/blue fight.ogg" type="audio/ogg">
+                </audio>
+                <p class="trackDesc">
+                    Combat music for the Blue Zone, a weird place.
+                </p>
             </div>
         </div>
 
@@ -335,24 +241,21 @@
 
             <p class="projectDesc">
                 An unfinished project in collaboration with other hobby devs.
-                The game would be set in an office environment and focuses on completing various minigames to make it through the day and advance through the many different departments of the company.<br><br>
-                For the tracks I ended up making, I tried to capture the business-y office vibe, while throwing in some goofs that represent the main character's slightly more fantastical approach to things!
+                The game would be set in an office environment and focuses on completing various minigames to make it through the day, while advancing through the many different departments of the company.
             </p>
 
             <div class="projectContent">
                 <audio controls>
-                    <source src="music/main theme OMEGAFINISHED.mp3" type="audio/mp3">
+                    <source src="music/cross boss/main theme OMEGAFINISHED.mp3" type="audio/mp3">
                 </audio>
-
                 <p class="trackDesc">
-                    The Main Theme for the game! This was very fun to make because it really let me feel out the right sound for the whole project.<br>
-                    <i class="tiny">(also it ends weirdly because it's a loop)</i>
+                    The Main Theme for the game! This was very fun to make because it really made me think about the whole vibe for the project.
+                    <i class="tiny">(also it's a loop)</i>
                 </p>
 
                 <audio controls>
-                    <source src="music/biz.mp3" type="audio/mp3">
+                    <source src="music/cross boss/biz.mp3" type="audio/mp3">
                 </audio>
-
                 <p class="trackDesc">Breakroom music for quiet dialog sections in between minigames.</p>
             </div>
         </div>
@@ -365,7 +268,6 @@
                 <audio controls>
                     <source src="music/moonthly banjo kazooie.wav" type="audio/wav">
                 </audio>
-
                 <p class="trackDesc">--bango mango--</p>
             </div>
         </div>
@@ -376,11 +278,34 @@
     </footer>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@7"></script>
 <script>
     const audios = document.getElementsByTagName('audio');
     for (audio of audios) {
         audio.volume = 0.5;
     }
+
+    VANTA.BIRDS({
+        el: "#cover",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color1: 0x3ecdf0,
+        color2: 0xed904d,
+        colorMode: "lerp",
+        birdSize: 1.20,
+        wingSpan: 1.00,
+        quantity: 3.00,
+        separation: 27.00,
+        alignment: 30.00,
+        cohesion: 50.00,
+        speedLimit: 4.00,
+        backgroundAlpha: 0.00,
+    })
 </script>
 
 </html>
