@@ -319,6 +319,7 @@
         connectAudioToVisualizers(audio);
         audio.volume = 0.35;
         audio.addEventListener('play', function() {
+            resumeAudioContext();
             stopAllOtherAudio.call(this);
         });
         audio.addEventListener('volumechange', function() {
@@ -326,10 +327,14 @@
         });
     });
 
-    document.addEventListener('click', () => {
+    function resumeAudioContext() {
         if (sharedAudioContext.state === 'suspended') {
             sharedAudioContext.resume();
         }
+    }
+
+    document.addEventListener('click', () => {
+        resumeAudioContext();
     });
 
     document.addEventListener('DOMContentLoaded', () => {
