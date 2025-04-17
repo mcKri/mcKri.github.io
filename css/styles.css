@@ -134,7 +134,6 @@ footer {
 .links {
     display: inline-flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
@@ -154,7 +153,6 @@ footer {
     border-color: rgba(1, 1, 1, 0.5);
     border-radius: 5px;
     border-width: 2px;
-    vertical-align: center;
     font-size: 17px;
     box-shadow: 3px 2px var(--color6);
 }
