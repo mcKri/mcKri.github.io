@@ -220,6 +220,7 @@ footer {
     color: var(--color2);
     padding: 10px;
     text-align: justify;
+    border-top-right-radius: 10px;
 }
 
 .projectContent {
