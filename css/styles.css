@@ -40,6 +40,8 @@ h1 {
     color: var(--color4);
     text-shadow: 5px 3px var(--color3),
         5px 0px rgba(1, 1, 1, 0.5);
+    display: inline-block;
+    text-align: center;
 }
 
 h2 {
@@ -129,6 +131,7 @@ footer {
     background-size: fill;
     background-position: top center;
     color: var(--color3);
+    border-bottom-right-radius: 15px;
 }
 
 .links {
@@ -230,6 +233,16 @@ footer {
 .trackDesc {
     text-align: left;
     margin-left: 10px;
+}
+
+.sticky {
+    position: fixed !important;
+    margin: 0 auto;
+    border-radius: 0px 0px 10px 10px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000 !important;
 }
 
 #audio-visualizer-left,

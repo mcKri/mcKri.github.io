@@ -16,7 +16,15 @@
 
     <div class="cover" id="cover">
         <div class="header">
-            <h1>Kri</h1>
+            <h1 id="play-sound">Kri</h1>
+            <audio id="click-sound" src="quack.mp3"></audio>
+            <script>
+                document.getElementById('play-sound').addEventListener('click', () => {
+                    const audio = document.getElementById('click-sound');
+                    audio.currentTime = 0;
+                    audio.play();
+                });
+            </script>
             <h4>music guy</h4>
         </div>
 
@@ -281,15 +289,19 @@
     audioMotionLeft.gradient = 'myGradient';
     audioMotionRight.gradient = 'myGradient';
 
+    const connectedAudioElements = new Set();
+
     function connectAudioToVisualizers(audioElement) {
+        if (connectedAudioElements.has(audioElement)) return;
         const source = sharedAudioContext.createMediaElementSource(audioElement);
         audioMotionLeft.connectInput(source);
         audioMotionRight.connectInput(source);
+        connectedAudioElements.add(audioElement);
     }
 
     function stopAllOtherAudio() {
         audioElements.forEach(audio => {
-            if (audio !== this) {
+            if (audio !== this && !audio.paused) {
                 audio.pause();
                 audio.currentTime = 0;
             }
@@ -306,7 +318,7 @@
 
     audioElements.forEach(audio => {
         connectAudioToVisualizers(audio);
-        audio.volume = 0.5;
+        audio.volume = 0.35;
         audio.addEventListener('play', function() {
             stopAllOtherAudio.call(this);
         });
@@ -319,6 +331,20 @@
         if (sharedAudioContext.state === 'suspended') {
             sharedAudioContext.resume();
         }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelector('.links');
+        const linksOffsetTop = links.offsetTop;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > linksOffsetTop) {
+                links.classList.add('sticky');
+                console.log('STICKING');
+            } else {
+                links.classList.remove('sticky');
+            }
+        });
     });
 </script>
 <script>
