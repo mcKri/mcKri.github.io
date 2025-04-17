@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kri.boats</title>
     <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta:wght@400;700&display=swap">
     <link rel="stylesheet" href = "css/styles.css">
 </head>
 
 <body>
+    <div id="audio-visualizer-left"></div>
+    <div id="audio-visualizer-right"></div>
+
     <div class="cover" id="cover">
         <div class="header">
             <h1>Kri</h1>
@@ -66,7 +67,7 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/roomba/r.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">a music.</p>
@@ -85,17 +86,17 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/boulder/uh.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">Menu music</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/boulder/thing3.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">Gameplay music for the first couple levels</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/boulder/thign2.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">Music for the extremely difficult finals levels</p>
@@ -113,25 +114,44 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/sunfall/lab_present.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">The present/dark version of the Lab, the intro area to the game.</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/sunfall/lab_past.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">(past/light version)</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/sunfall/town_past.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">The light version of the town music, where most of the quests take place!</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/sunfall/thing_2.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">(unused track)</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>
+                <b>Car</b> <i style="font-size: 15px; font-weight: normal">(working title)</i>
+                <span>march 2024 - august 2024</span>
+            </h3>
+
+            <p class="projectDesc">
+                A solo project I was working on for a while, which I ended up putting on hold. (But I'd like to finish it someday!)<br><br>
+                It's an extremely unfair and irritating driving game, following John "Drive" Car.
+            </p>
+
+            <div class="projectContent">
+                <audio controls loop>
+                    <source src="music/car/vrr.wav" type="audio/wav">
+                </audio>
+                <p class="trackDesc">One of the tracks that would play on the car radio.</p>
             </div>
         </div>
 
@@ -146,17 +166,17 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/fruit salad/uhh.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">Menu music.</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/fruit salad/something.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">Initial gameplay music.</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/fruit salad/beeps.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">Gameplay music after you cross a certain score and start popping off.</p>
@@ -174,24 +194,24 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/rgb/220920_dink.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">--shop--</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/rgb/220924_boss.flac" type="audio/flac">
                 </audio>
                 <p class="trackDesc">--boss fight--</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/rgb/220824_evil.mp3" type="audio/mp3">
                 </audio>
                 <p class="trackDesc">
                     Dialogue music for a very evil vampire man who I enjoy writing very much.<br>
                 </p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/rgb/220629_beep.flac" type="audio/flac">
                 </audio>
                 <p class="trackDesc">--combat music--</p>
@@ -209,12 +229,12 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/justice realms/queen of hearts+.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">Boss battle music for the Queen of Hearts.</p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/justice realms/gog fight+.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">
@@ -222,12 +242,12 @@
                     I also made another version of this track for the <a class="url" href="https://www.youtube.com/watch?v=M55tkpsMo2s&list=PLWCe6Rd6c67XpVwhBJa2zjWWBe219VEsX&index=1">Menu Theme!</a>
                 </p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/justice realms/green fight.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">Combat music for the Green Zone, which is green. Flutes are mandatory in Green Zones.</p>
                 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/justice realms/blue fight.ogg" type="audio/ogg">
                 </audio>
                 <p class="trackDesc">
@@ -245,15 +265,14 @@
             </p>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/cross boss/main theme OMEGAFINISHED.mp3" type="audio/mp3">
                 </audio>
                 <p class="trackDesc">
                     The Main Theme for the game! This was very fun to make because it really made me think about the whole vibe for the project.
-                    <i class="tiny">(also it's a loop)</i>
                 </p>
 
-                <audio controls>
+                <audio controls loop>
                     <source src="music/cross boss/biz.mp3" type="audio/mp3">
                 </audio>
                 <p class="trackDesc">Breakroom music for quiet dialog sections in between minigames.</p>
@@ -265,7 +284,7 @@
             <br>
 
             <div class="projectContent">
-                <audio controls>
+                <audio controls loop>
                     <source src="music/moonthly banjo kazooie.wav" type="audio/wav">
                 </audio>
                 <p class="trackDesc">--bango mango--</p>
@@ -280,13 +299,63 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js"></script>
-<script src="https://unpkg.com/wavesurfer.js@7"></script>
-<script>
-    const audios = document.getElementsByTagName('audio');
-    for (audio of audios) {
-        audio.volume = 0.5;
+<script type="module">
+    import AudioMotionAnalyzer from 'https://cdn.skypack.dev/audiomotion-analyzer?min';
+
+    const audioElements = document.querySelectorAll('audio');
+    const visualizerLeft = document.getElementById('audio-visualizer-left');
+    const visualizerRight = document.getElementById('audio-visualizer-right');
+    const sharedAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    const visualizerSettings = {
+        audioCtx: sharedAudioContext,
+        mode: 4,
+        overlay: true,
+        showBgColor: false,
+        showScaleX: false,
+        showPeaks: false,
+    };
+
+    const audioMotionLeft = new AudioMotionAnalyzer(visualizerLeft, {
+        ...visualizerSettings,
+        channelLayout: 'single-left',
+    });
+
+    const audioMotionRight = new AudioMotionAnalyzer(visualizerRight, {
+        ...visualizerSettings,
+        channelLayout: 'single-right',
+    });
+
+    const colorStops = [{ color: '#488cab' }];
+    audioMotionLeft.registerGradient('myGradient', { colorStops });
+    audioMotionRight.registerGradient('myGradient', { colorStops });
+    audioMotionLeft.gradient = 'myGradient';
+    audioMotionRight.gradient = 'myGradient';
+
+    function connectAudioToVisualizers(audioElement) {
+        const source = sharedAudioContext.createMediaElementSource(audioElement);
+        audioMotionLeft.connectInput(source);
+        audioMotionRight.connectInput(source);
     }
 
+    function stopAllOtherAudio() {
+        audioElements.forEach(audio => {
+            if (audio !== this) {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+    }
+
+    audioElements.forEach(audio => {
+        connectAudioToVisualizers(audio);
+        audio.volume = 0.5;
+        audio.addEventListener('play', function() {
+            stopAllOtherAudio.call(this);
+        });
+    });
+</script>
+<script>
     VANTA.BIRDS({
         el: "#cover",
         mouseControls: true,

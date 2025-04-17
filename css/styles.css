@@ -109,7 +109,8 @@ footer {
 }
 
 .cover::before {
-    background: linear-gradient(to bottom, var(--color8) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, var(--color8) 100%);
+    mix-blend-mode: screen;
     content: "";
     position: absolute;
     top: 0;
@@ -230,4 +231,24 @@ footer {
 .trackDesc {
     text-align: left;
     margin-left: 10px;
+}
+
+#audio-visualizer-left,
+#audio-visualizer-right {
+    position: fixed;
+    width: 100vh;
+    height: 16vw;
+    z-index: -2;
+    pointer-events: none;
+}
+
+#audio-visualizer-left {
+    left: 8vw;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center left;
+}
+#audio-visualizer-right {
+    right: 8vw;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center right;
 }
